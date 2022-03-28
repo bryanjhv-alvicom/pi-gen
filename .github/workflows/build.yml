@@ -1,0 +1,23 @@
+name: Build
+on: workflow_dispatch
+
+jobs:
+  build:
+    name: Build image
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+        with:
+          platforms: arm
+      - name: Run build script
+        run: docker/build.sh
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          path: |
+            deploy/*.info
+            deploy/image_*.zip
+          if-no-files-found: error
