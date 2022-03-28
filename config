@@ -1,0 +1,19 @@
+#!/bin/bash
+
+IMG_NAME="gatpios-bullseye-armhf"
+RELEASE="bullseye"
+
+TIMEZONE_DEFAULT="Etc/UTC"
+LOCALE_DEFAULT="en_US.UTF-8"
+KEYBOARD_KEYMAP="latam"
+KEYBOARD_LAYOUT="Spanish (Latin American)"
+
+TARGET_HOSTNAME="raspberrypi"
+FIRST_USER_NAME="pi"
+FIRST_USER_PASS="pi"
+
+ENABLE_SSH=1
+
+WPA_COUNTRY="PE"
+WPA_ESSID="DTS"
+WPA_PASSWORD="12345678"
