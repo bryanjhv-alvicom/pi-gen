@@ -1,5 +1,8 @@
 name: Build
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '20 11 * * 1-5'
 
 jobs:
   build:
@@ -21,3 +24,4 @@ jobs:
             deploy/*.info
             deploy/image_*.zip
           if-no-files-found: error
+          retention-days: 3
