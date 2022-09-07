@@ -1,7 +1,8 @@
 gpsd
 python3-gps
 
-tinc
+tailscale
 
+can-utils
 i2c-tools
 screen

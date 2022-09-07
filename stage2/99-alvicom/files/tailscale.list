@@ -1,0 +1,2 @@
+# Tailscale packages for raspbian bullseye
+deb https://pkgs.tailscale.com/stable/raspbian bullseye main
